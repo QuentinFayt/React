@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MixedContent from "components/MixedContent";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+const App = () => (
+    <div>
+        <MixedContent title="Voici la première image" img="weird" text="Incroyable, non?"/>
+        <MixedContent title="Voici la deuxième image" img="cat" text="Un chat!"/>
+        <MixedContent title="Voici la troisième image" img="paint" text="C bo"/>
+        <MixedContent title="Voici la quatrième image" img="explosion" text="Ça explose"/>
+        <MixedContent title="Voici la cinquième image" img="dog" text="Un chieng!"/>
+    </div>
 );
+ReactDOM.render(<App/>, document.getElementById('root'));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
